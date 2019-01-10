@@ -5,3 +5,4 @@
 build
 /out/
 /.idea/
+/src/main/resources/bundle.p8
