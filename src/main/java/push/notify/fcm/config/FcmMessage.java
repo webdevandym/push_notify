@@ -1,10 +1,12 @@
 package push.notify.fcm.config;
 
+import push.notify.platform.config.Message;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Message implements push.notify.platform.config.Message {
+public class FcmMessage implements Message {
 
     private String              notifyTitle;
     private String              notifyBody;

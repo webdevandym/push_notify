@@ -1,9 +1,11 @@
 package push.notify.apns.config;
 
+import push.notify.platform.config.Message;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Message implements push.notify.platform.config.Message {
+public class ApnsMessage implements Message {
 
     private String              apsAlertTitle;
     private String              apsAlertBody;
