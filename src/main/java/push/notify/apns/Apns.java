@@ -9,7 +9,7 @@ import com.turo.pushy.apns.util.TokenUtil;
 import com.turo.pushy.apns.util.concurrent.PushNotificationFuture;
 import io.netty.util.concurrent.Future;
 import push.notify.apns.config.ApnsNotificationsConfig;
-import push.notify.apns.config.Message;
+import push.notify.apns.config.ApnsMessage;
 import push.notify.platform.Platform;
 
 import java.io.IOException;
@@ -28,8 +28,8 @@ public class Apns implements Platform {
         this.apnsClient = initClient(apnsNotificationsConfig);
     }
 
-    public void setMessage(Message message) {
-        this.payload = new ApnsMessageBuilder(message).build();
+    public void setMessage(ApnsMessage apnsMessage) {
+        this.payload = new ApnsMessageBuilder(apnsMessage).build();
     }
 
     public ApnsSendStatus send(String token) throws ExecutionException {
