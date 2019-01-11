@@ -6,3 +6,6 @@ build
 /out/
 /.idea/
 /src/main/resources/bundle.p8
+src/main/resources/
+src/test/java/
+src/test/resources/

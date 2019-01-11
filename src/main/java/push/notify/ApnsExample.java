@@ -3,7 +3,7 @@ package push.notify;
 import push.notify.apns.Apns;
 import push.notify.apns.ApnsSendStatus;
 import push.notify.apns.config.ApnsNotificationsConfig;
-import push.notify.apns.config.Message;
+import push.notify.apns.config.ApnsMessage;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,12 +24,12 @@ public class ApnsExample {
         apnsNotificationsConfig.setP8(file);
         apnsNotificationsConfig.setTopic("com.tomych.itls.stage");
 
-        Message message = new Message();
-        message.setApsAlertBody("HELLO!");
-        message.setApsAlertTitle("OMG!");
+        ApnsMessage apnsMessage = new ApnsMessage();
+        apnsMessage.setApsAlertBody("HELLO!");
+        apnsMessage.setApsAlertTitle("OMG!");
 
         Apns apns = new Apns(apnsNotificationsConfig);
-        apns.setMessage(message);
+        apns.setMessage(apnsMessage);
 
         if (apns.send("B251F2B8DB70A15511032BFDFE1D5BA04462359B3E1E64A19A5809B8C34CC29A") == ApnsSendStatus.ACCEPTED) {
             System.out.print("OK");
