@@ -18,7 +18,8 @@ import java.io.IOException;
 
 public class Fcm implements Platform {
 
-    private HttpPost   httpPost;
+    private static final String HTTPS_FCM_GOOGLEAPIS_COM_FCM_SEND = "https://fcm.googleapis.com/fcm/send";
+    private HttpPost httpPost;
     private HttpClient httpClient;
 
     public Fcm(FcmNotificationsConfig fcmNotificationsConfig) {
@@ -40,7 +41,7 @@ public class Fcm implements Platform {
     private void initClient(FcmNotificationsConfig fcmNotificationsConfig) {
         httpClient = HttpClientBuilder.create().build();
 
-        httpPost = new HttpPost("https://fcm.googleapis.com/fcm/send");
+        httpPost = new HttpPost(HTTPS_FCM_GOOGLEAPIS_COM_FCM_SEND);
         httpPost.setHeader("Content-type", "application/json");
         httpPost.setHeader("Authorization", "key=" + fcmNotificationsConfig.getApiKey());
     }
