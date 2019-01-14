@@ -1,23 +1,23 @@
 package push.notify.apns;
 
 import com.turo.pushy.apns.util.ApnsPayloadBuilder;
-import push.notify.apns.config.ApnsMessage;
+import push.notify.apns.config.ApnsPayload;
 
 import java.util.Map;
 
 class ApnsMessageBuilder {
 
-    private final ApnsMessage apnsMessage;
+    private final ApnsPayload apnsPayload;
 
-    ApnsMessageBuilder(ApnsMessage apnsMessage) {
-        this.apnsMessage = apnsMessage;
+    ApnsMessageBuilder(ApnsPayload apnsPayload) {
+        this.apnsPayload = apnsPayload;
     }
 
     String build() {
         final ApnsPayloadBuilder payloadBuilder = new ApnsPayloadBuilder();
 
-        payloadBuilder.setAlertBody(apnsMessage.getApsAlertBody());
-        payloadBuilder.setAlertTitle(apnsMessage.getApsAlertTitle());
+        payloadBuilder.setAlertBody(apnsPayload.getApsAlertBody());
+        payloadBuilder.setAlertTitle(apnsPayload.getApsAlertTitle());
 
         additionProps(payloadBuilder);
 
@@ -27,7 +27,7 @@ class ApnsMessageBuilder {
 
     private void additionProps(ApnsPayloadBuilder apnsPayloadBuilder) {
 
-        Map<String, Object> additionFields = apnsMessage.getAdditionFields();
+        Map<String, Object> additionFields = apnsPayload.getAdditionFields();
 
         if (additionFields.isEmpty()) {
             return;

@@ -3,14 +3,16 @@ package push.notify.apns.config;
 import push.notify.platform.config.Message;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class ApnsMessage implements Message {
+public class ApnsPayload implements Message {
 
     private String              apsAlertTitle;
     private String              apsAlertBody;
     private String              sound;
     private Map<String, Object> additionFields = new HashMap<>();
+    private List<String>        devices;
 
     public String getApsAlertTitle() {
         return apsAlertTitle;
@@ -42,5 +44,13 @@ public class ApnsMessage implements Message {
 
     public void setAdditionFields(Map<String, Object> additionFields) {
         this.additionFields = additionFields;
+    }
+
+    public List<String> getDevices() {
+        return devices;
+    }
+
+    public void setDevices(List<String> devices) {
+        this.devices = devices;
     }
 }
