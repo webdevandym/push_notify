@@ -1,7 +1,7 @@
-package push.notify.fcm.query;
+package com.neijel.push.notify.fcm.query;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import push.notify.platform.query.Response;
+import com.neijel.push.notify.platform.query.Response;
 
 import java.util.List;
 

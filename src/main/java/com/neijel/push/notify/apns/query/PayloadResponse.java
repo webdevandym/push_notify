@@ -1,4 +1,4 @@
-package push.notify.apns.query;
+package com.neijel.push.notify.apns.query;
 
 import java.util.List;
 

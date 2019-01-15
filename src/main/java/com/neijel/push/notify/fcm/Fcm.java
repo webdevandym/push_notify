@@ -1,6 +1,10 @@
-package push.notify.fcm;
+package com.neijel.push.notify.fcm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.neijel.push.notify.fcm.config.FcmMessage;
+import com.neijel.push.notify.fcm.query.AndroidResponse;
+import com.neijel.push.notify.platform.Platform;
+import com.neijel.push.notify.platform.query.Callback;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -8,11 +12,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import push.notify.fcm.config.FcmMessage;
-import push.notify.fcm.config.FcmNotificationsConfig;
-import push.notify.fcm.query.AndroidResponse;
-import push.notify.platform.Platform;
-import push.notify.platform.query.Callback;
+import com.neijel.push.notify.fcm.config.FcmNotificationsConfig;
 
 import java.io.IOException;
 

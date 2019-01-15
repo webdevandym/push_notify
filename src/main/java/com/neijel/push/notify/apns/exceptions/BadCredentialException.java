@@ -1,4 +1,4 @@
-package push.notify.apns.exceptions;
+package com.neijel.push.notify.apns.exceptions;
 
 public class BadCredentialException extends Exception {
     public BadCredentialException() {

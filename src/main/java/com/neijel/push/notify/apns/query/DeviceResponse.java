@@ -1,6 +1,6 @@
-package push.notify.apns.query;
+package com.neijel.push.notify.apns.query;
 
-import push.notify.apns.ApnsSendStatus;
+import com.neijel.push.notify.apns.ApnsSendStatus;
 
 public class DeviceResponse {
 

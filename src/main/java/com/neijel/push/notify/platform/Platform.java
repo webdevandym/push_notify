@@ -1,5 +1,5 @@
-package push.notify.platform;
+package com.neijel.push.notify.platform;
 
 public interface Platform {
-    
+
 }

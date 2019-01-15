@@ -1,4 +1,4 @@
-package push.notify.apns;
+package com.neijel.push.notify.apns;
 
 import com.turo.pushy.apns.ApnsClient;
 import com.turo.pushy.apns.PushNotificationResponse;
@@ -6,12 +6,12 @@ import com.turo.pushy.apns.util.SimpleApnsPushNotification;
 import com.turo.pushy.apns.util.TokenUtil;
 import com.turo.pushy.apns.util.concurrent.PushNotificationFuture;
 import io.netty.util.concurrent.Future;
-import push.notify.apns.config.ApnsNotificationsConfig;
-import push.notify.apns.config.ApnsPayload;
-import push.notify.apns.exceptions.BadCredentialException;
-import push.notify.apns.query.DeviceResponse;
-import push.notify.apns.query.PayloadResponse;
-import push.notify.platform.Platform;
+import com.neijel.push.notify.apns.config.ApnsNotificationsConfig;
+import com.neijel.push.notify.apns.config.ApnsPayload;
+import com.neijel.push.notify.apns.exceptions.BadCredentialException;
+import com.neijel.push.notify.apns.query.DeviceResponse;
+import com.neijel.push.notify.apns.query.PayloadResponse;
+import com.neijel.push.notify.platform.Platform;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;

@@ -1,10 +1,10 @@
-package push.notify.apns;
+package com.neijel.push.notify.apns;
 
+import com.neijel.push.notify.apns.config.ApnsNotificationsConfig;
 import com.turo.pushy.apns.ApnsClient;
 import com.turo.pushy.apns.ApnsClientBuilder;
 import com.turo.pushy.apns.auth.ApnsSigningKey;
-import push.notify.apns.config.ApnsNotificationsConfig;
-import push.notify.apns.exceptions.BadCredentialException;
+import com.neijel.push.notify.apns.exceptions.BadCredentialException;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;

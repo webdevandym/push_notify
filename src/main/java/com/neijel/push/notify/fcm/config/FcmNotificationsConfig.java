@@ -1,6 +1,6 @@
-package push.notify.fcm.config;
+package com.neijel.push.notify.fcm.config;
 
-import push.notify.platform.config.PlatformNotificationsConfig;
+import com.neijel.push.notify.platform.config.PlatformNotificationsConfig;
 
 public class FcmNotificationsConfig implements PlatformNotificationsConfig {
 

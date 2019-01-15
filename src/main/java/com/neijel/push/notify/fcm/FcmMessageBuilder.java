@@ -1,7 +1,7 @@
-package push.notify.fcm;
+package com.neijel.push.notify.fcm;
 
+import com.neijel.push.notify.fcm.config.FcmMessage;
 import org.json.JSONObject;
-import push.notify.fcm.config.FcmMessage;
 
 public class FcmMessageBuilder {
 

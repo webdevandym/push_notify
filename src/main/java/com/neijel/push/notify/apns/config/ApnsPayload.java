@@ -1,6 +1,6 @@
-package push.notify.apns.config;
+package com.neijel.push.notify.apns.config;
 
-import push.notify.platform.config.Message;
+import com.neijel.push.notify.platform.config.Message;
 
 import java.util.HashMap;
 import java.util.List;

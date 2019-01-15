@@ -1,7 +1,7 @@
-package push.notify.apns;
+package com.neijel.push.notify.apns;
 
 import com.turo.pushy.apns.util.ApnsPayloadBuilder;
-import push.notify.apns.config.ApnsPayload;
+import com.neijel.push.notify.apns.config.ApnsPayload;
 
 import java.util.Map;
 
