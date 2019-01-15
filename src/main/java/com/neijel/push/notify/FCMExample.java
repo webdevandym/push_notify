@@ -1,11 +1,11 @@
-package push.notify;
+package com.neijel.push.notify;
 
 
-import push.notify.fcm.Fcm;
-import push.notify.fcm.config.FcmNotificationsConfig;
-import push.notify.fcm.config.FcmMessage;
-import push.notify.platform.query.Callback;
-import push.notify.platform.query.Response;
+import com.neijel.push.notify.fcm.config.FcmMessage;
+import com.neijel.push.notify.platform.query.Callback;
+import com.neijel.push.notify.platform.query.Response;
+import com.neijel.push.notify.fcm.Fcm;
+import com.neijel.push.notify.fcm.config.FcmNotificationsConfig;
 
 import java.util.ArrayList;
 

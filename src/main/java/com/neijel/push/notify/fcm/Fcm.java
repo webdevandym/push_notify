@@ -8,8 +8,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import push.notify.fcm.config.FcmNotificationsConfig;
 import push.notify.fcm.config.FcmMessage;
+import push.notify.fcm.config.FcmNotificationsConfig;
 import push.notify.fcm.query.AndroidResponse;
 import push.notify.platform.Platform;
 import push.notify.platform.query.Callback;
@@ -18,9 +18,9 @@ import java.io.IOException;
 
 public class Fcm implements Platform {
 
-    private static final String HTTPS_FCM_GOOGLEAPIS_COM_FCM_SEND = "https://fcm.googleapis.com/fcm/send";
-    private HttpPost httpPost;
-    private HttpClient httpClient;
+    private static final String     HTTPS_FCM_GOOGLEAPIS_COM_FCM_SEND = "https://fcm.googleapis.com/fcm/send";
+    private              HttpPost   httpPost;
+    private              HttpClient httpClient;
 
     public Fcm(FcmNotificationsConfig fcmNotificationsConfig) {
         initClient(fcmNotificationsConfig);
@@ -46,7 +46,7 @@ public class Fcm implements Platform {
         httpPost.setHeader("Authorization", "key=" + fcmNotificationsConfig.getApiKey());
     }
 
-    private void handleRequest(HttpResponse httpResponse, Callback callback) throws Exception {
+    private void handleRequest(HttpResponse httpResponse, Callback callback) throws IOException {
 
         HttpEntity entity = httpResponse.getEntity();
 

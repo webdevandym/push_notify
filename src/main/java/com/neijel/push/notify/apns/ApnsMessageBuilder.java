@@ -18,6 +18,7 @@ class ApnsMessageBuilder {
 
         payloadBuilder.setAlertBody(apnsPayload.getApsAlertBody());
         payloadBuilder.setAlertTitle(apnsPayload.getApsAlertTitle());
+        payloadBuilder.setSound(apnsPayload.getSound());
 
         additionProps(payloadBuilder);
 
