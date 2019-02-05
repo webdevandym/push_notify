@@ -29,7 +29,7 @@ public class ApnsExample {
 
         ArrayList<ApnsPayload> apnsPayloads = new ArrayList<>();
 
-        for (int j = 0; j < 100; j++) {
+        for (int j = 0; j < 1; j++) {
             ApnsPayload apnsPayload = new ApnsPayload();
             apnsPayload.setApsAlertBody("HELLO!" + j);
             apnsPayload.setApsAlertTitle("OMG!");
