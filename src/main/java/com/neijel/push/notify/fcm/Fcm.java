@@ -1,7 +1,7 @@
 package com.neijel.push.notify.fcm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.neijel.push.notify.fcm.config.FcmMessage;
+import com.neijel.push.notify.fcm.config.FcmPayload;
 import com.neijel.push.notify.fcm.query.AndroidResponse;
 import com.neijel.push.notify.platform.Platform;
 import com.neijel.push.notify.platform.query.Callback;
@@ -26,16 +26,16 @@ public class Fcm implements Platform {
         initClient(fcmNotificationsConfig);
     }
 
-    public HttpResponse send(FcmMessage fcmMessage) throws IOException {
-        String request = new FcmMessageBuilder(fcmMessage).build();
+    public HttpResponse send(FcmPayload fcmPayload) throws IOException {
+        String request = new FcmMessageBuilder(fcmPayload).build();
 
 
         httpPost.setEntity(new StringEntity(request, "UTF-8"));
         return httpClient.execute(httpPost);
     }
 
-    public void send(FcmMessage fcmMessage, Callback callback) throws Exception {
-        handleRequest(send(fcmMessage), callback);
+    public void send(FcmPayload fcmPayload, Callback callback) throws Exception {
+        handleRequest(send(fcmPayload), callback);
     }
 
     private void initClient(FcmNotificationsConfig fcmNotificationsConfig) {

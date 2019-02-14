@@ -1,31 +1,37 @@
 package com.neijel.push.notify.fcm;
 
-import com.neijel.push.notify.fcm.config.FcmMessage;
+import com.neijel.push.notify.fcm.config.FcmPayload;
 import org.json.JSONObject;
 
-public class FcmMessageBuilder {
+class FcmMessageBuilder {
 
-    private FcmMessage fcmMessage;
+    private FcmPayload fcmPayload;
 
-    FcmMessageBuilder(FcmMessage fcmMessage) {
-        this.fcmMessage = fcmMessage;
+    FcmMessageBuilder(FcmPayload fcmPayload) {
+        this.fcmPayload = fcmPayload;
     }
 
     String build() {
 
         JSONObject request = new JSONObject();
-        request.put("registration_ids", fcmMessage.getDevices());
-        request.put("priority", fcmMessage.getPriority());
+        request.put("registration_ids", fcmPayload.getDevices());
+        request.put("priority", fcmPayload.getPriority());
 
         JSONObject notification = new JSONObject();
-        notification.put("title", fcmMessage.getNotifyTitle());
-        notification.put("body", fcmMessage.getNotifyBody());
+        notification.put("title", fcmPayload.getNotifyTitle());
+        notification.put("body", fcmPayload.getNotifyBody());
+        notification.put("android_channel_id", fcmPayload.getAndroidChannelId());
+        notification.put("icon", fcmPayload.getNotifyIcon());
+        notification.put("sound", fcmPayload.getNotifySound());
+        notification.put("tag", fcmPayload.getNotifyTag());
+        notification.put("color", fcmPayload.getNotifyColor());
+        notification.put("click_action", fcmPayload.getNotifyClickAction());
 
         request.put("notification", notification);
 
-        if (!fcmMessage.getData().isEmpty()) {
+        if (!fcmPayload.getData().isEmpty()) {
             JSONObject data = new JSONObject();
-            fcmMessage.getData().forEach(data::put);
+            fcmPayload.getData().forEach(data::put);
 
             request.put("data", data);
         }
