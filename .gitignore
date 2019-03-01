@@ -9,6 +9,6 @@ build
 src/main/resources/
 src/test/java/
 src/test/resources/
-/.gnupg/
 /old/
 /gradle.properties
+/.gnupg/

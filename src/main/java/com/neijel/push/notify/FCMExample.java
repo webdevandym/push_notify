@@ -1,11 +1,11 @@
 package com.neijel.push.notify;
 
 
-import com.neijel.push.notify.fcm.config.FcmMessage;
-import com.neijel.push.notify.platform.query.Callback;
-import com.neijel.push.notify.platform.query.Response;
 import com.neijel.push.notify.fcm.Fcm;
 import com.neijel.push.notify.fcm.config.FcmNotificationsConfig;
+import com.neijel.push.notify.fcm.config.FcmPayload;
+import com.neijel.push.notify.platform.query.Callback;
+import com.neijel.push.notify.platform.query.Response;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class FCMExample {
 
         Fcm fcm = new Fcm(fcmNotificationsConfig);
 
-        FcmMessage fcmMessage1 = new FcmMessage();
+        FcmPayload fcmMessage1 = new FcmPayload();
         ArrayList<String> devices = new ArrayList<>();
         devices.add("c0WSB3fpNqg" +
                             ":APA91bHDh25a_8g7Qe9JGgmihqhnnOtQOthFNrhADHcvOWrrFFD7Rbbx7uKwH9dQVAsqlCwq9TNwLs7i7Dmns888SIm2dXFRYLnp1rsbXdXkHhSzdszI26w6apaZF_KPoKdOAQLYpE77");

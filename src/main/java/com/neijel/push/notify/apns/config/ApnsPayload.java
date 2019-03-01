@@ -1,12 +1,12 @@
 package com.neijel.push.notify.apns.config;
 
-import com.neijel.push.notify.platform.config.Message;
+import com.neijel.push.notify.platform.config.Payload;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ApnsPayload implements Message {
+public class ApnsPayload implements Payload {
 
     private String              apsAlertTitle;
     private String              apsAlertBody;
