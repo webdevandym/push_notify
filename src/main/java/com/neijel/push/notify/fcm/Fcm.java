@@ -63,7 +63,7 @@ public class Fcm implements Platform {
         return httpPost;
     }
 
-    private void handleRequest(List<HttpResponse> httpResponses, Callback callback) throws IOException {
+    private void handleRequest(List<HttpResponse> httpResponses, Callback callback) {
 
         httpResponses.forEach(response -> {
             try {
