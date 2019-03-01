@@ -24,29 +24,31 @@ public class ApnsExample {
         apnsNotificationsConfig.setKeyId("7MQ2CY2876");
         apnsNotificationsConfig.setTeamId("SPWJM4DSDE");
         apnsNotificationsConfig.setP8(file);
-        apnsNotificationsConfig.setTopic("com.tomych.itls.stage");
+        apnsNotificationsConfig.setTopic("com.tomych.itls.dev");
 
+
+        Apns apns = new Apns(apnsNotificationsConfig);
 
         ArrayList<ApnsPayload> apnsPayloads = new ArrayList<>();
 
-        for (int j = 0; j < 100; j++) {
+        for (int j = 0; j < 50; j++) {
             ApnsPayload apnsPayload = new ApnsPayload();
             apnsPayload.setApsAlertBody("HELLO!" + j);
             apnsPayload.setApsAlertTitle("OMG!");
 
             ArrayList<String> strings = new ArrayList<>();
-            for (int i = 0; i < 1; i++) {
-                strings.add("B251F2B8DB70A15511032BFDFE1D5BA04462359B3E1E64A19A5809B8C34CC29A");
+            for (int i = 0; i < 10; i++) {
+                strings.add("F0B6F383EADAB0B47644C0B8A4CEA3192495F7C2664E88730520CDC976733CA3");
             }
 
             apnsPayload.setDevices(strings);
 
-            apnsPayloads.add(apnsPayload);
+            apns.send(apnsPayload);
         }
 
-        Apns apns = new Apns(apnsNotificationsConfig);
 
-        List<PayloadResponse> payloadResponses = apns.sendBulk(apnsPayloads);
+
+//        List<PayloadResponse> payloadResponses = apns.sendBulk(apnsPayloads);
 
         System.out.println("");
 
