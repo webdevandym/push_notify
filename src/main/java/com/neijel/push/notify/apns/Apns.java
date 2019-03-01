@@ -55,7 +55,7 @@ public class Apns implements Platform {
         close.await();
     }
 
-    public void shutdownThreadPool() {
+    private void shutdownThreadPool() {
         executorService.shutdown();
         while (!executorService.isTerminated()) {
         }

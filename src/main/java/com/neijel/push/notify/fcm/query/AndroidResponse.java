@@ -22,6 +22,10 @@ public class AndroidResponse implements Response {
     @JsonProperty("multicast_id")
     private long multicastId;
 
+    private int statusCode;
+
+    private String requestError;
+
     public void setCanonicalIds(int canonicalIds) {
         this.canonicalIds = canonicalIds;
     }
@@ -62,15 +66,33 @@ public class AndroidResponse implements Response {
         return multicastId;
     }
 
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
+    }
+
+    public String getRequestError() {
+        return requestError;
+    }
+
+    public void setRequestError(String requestError) {
+        this.requestError = requestError;
+    }
+
     @Override
     public String toString() {
-        return
-                "AndroidResponse{" +
-                        "canonical_ids = '" + canonicalIds + '\'' +
-                        ",success = '" + success + '\'' +
-                        ",failure = '" + failure + '\'' +
-                        ",results = '" + results + '\'' +
-                        ",multicast_id = '" + multicastId + '\'' +
-                        "}";
+        return "AndroidResponse{" +
+                "canonicalIds=" + canonicalIds +
+                ", success=" + success +
+                ", failure=" + failure +
+                ", results=" + results +
+                ", multicastId=" + multicastId +
+                ", statusCode=" + statusCode +
+                ", requestError='" + requestError + '\'' +
+                '}';
     }
 }
